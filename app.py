@@ -91,6 +91,8 @@ def load_parquet():
 
         pl.col('tpep_pickup_datetime').dt.weekday().map_elements(day).alias('pickup_day_of_week')])
 
+    if len(yellow_taxi) > 500_000: #due to memory issues, am sampling the data to 500k rows. 
+        yellow_taxi = yellow_taxi.sample(n=500_000, seed=42)
     return yellow_taxi
 
 

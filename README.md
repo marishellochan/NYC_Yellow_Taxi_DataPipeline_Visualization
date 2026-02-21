@@ -2,6 +2,8 @@
 
 🚕 **Deployed Streamlit App:** https://nycyellowtaxidatapipelinevisualization-9i2bg8a5jhb3huazoffses.streamlit.app/
 
+**NB: Due to memory issues, only 500k of the dataset was used for the app**
+
 An interactive dashboard for exploring NYC Yellow Taxi trip data built with Streamlit and Plotly.
 
 ## Features
@@ -20,12 +22,14 @@ An interactive dashboard for exploring NYC Yellow Taxi trip data built with Stre
 ## Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone <your-repo-url>
    cd <your-repo-name>
    ```
 
 2. **Install dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -36,6 +40,7 @@ An interactive dashboard for exploring NYC Yellow Taxi trip data built with Stre
    ```
 
 The app will automatically download the required data files on first launch:
+
 - NYC Yellow Taxi trip data (January 2024) — saved to `data/raw/yellow_taxi.parquet`
 - Taxi zone lookup table — saved to `data/raw/taxi_lookup.csv`
 
@@ -51,6 +56,7 @@ The app will automatically download the required data files on first launch:
 6. **Visualization** — charts and plots exploring trip patterns, fares, distances, and payment types
 
 To run the notebook:
+
 ```bash
 jupyter notebook assignment1.ipynb
 ```
