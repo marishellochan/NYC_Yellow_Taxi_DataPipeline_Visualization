@@ -1,5 +1,7 @@
 # NYC Yellow Taxi Dashboard
 
+🚕 **Deployed Streamlit App:** https://nycyellowtaxidatapipelinevisualization-9i2bg8a5jhb3huazoffses.streamlit.app/
+
 An interactive dashboard for exploring NYC Yellow Taxi trip data built with Streamlit and Plotly.
 
 ## Features
