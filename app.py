@@ -230,7 +230,7 @@ with tab1:
     fig = px.bar(resultQ1, x="Zone", y="total_trips", color="Zone",
                      labels={'total_trips': 'Total Trips'})
     fig.update_layout(height=500)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 
 with tab2:
@@ -245,7 +245,7 @@ with tab2:
     fig2 = px.line(filtered, x="hour", y="avg_fare", title="Average Fare by hour of day",
                        labels={'avg_fare': 'Average Fare', 'hour': 'Hour'})
     fig2.update_layout(height=500)
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
 with tab3:
     st.subheader('Distribution of Trips')
@@ -260,7 +260,7 @@ with tab3:
 
     fig3 = px.histogram(dist, x="trip_distance", nbins=100, histnorm="percent", title="Trip Distance Distribution")
     fig3.update_layout(height=500)
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, width='stretch')
 
 with tab4:
     st.subheader('Breakdown of Payment Types')
@@ -271,7 +271,7 @@ with tab4:
     fig4 = px.bar(resultQ3, x="payment_type", y="percentage", title="Breakdown of Payment Types", color="payment_type",
                       labels={'payment_type': 'Payment Type', "percentage": "Percentage of Trips"}, height=400)
     fig4.update_layout(height=500)
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width='stretch')
 
 
 with tab5:
@@ -284,7 +284,7 @@ with tab5:
                               labels={"pickup_hour": "Hour", "pickup_day_of_week": "Day of Week"})
     fig5.update_coloraxes(colorbar_title="Number of Trips")
     fig5.update_layout(height=500)
-    st.plotly_chart(fig5, use_container_width=True)
+    st.plotly_chart(fig5, width='stretch')
 
 
 
