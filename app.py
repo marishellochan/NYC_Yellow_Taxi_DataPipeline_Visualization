@@ -129,6 +129,7 @@ This dashboard lets you explore NYC Yellow Taxi trip data. You can filter by dat
 and view insights such as top pickup zones, fare patterns, trip distances, payment breakdowns, and weekly trip trends.
 
 NB: The data is sampled to 500,000 rows for performance reasons.
+            
 Built with Streamlit and Plotly. 
 """)
 
@@ -229,7 +230,6 @@ with tab1:
         st.write("The visualization shows that Midtown center is the top zone with the most trips. "
                  "It is also revealed that the airports such as JFK nad LaGuardia are also common zones that taxis pick up from.")
 
-    st.write("Chart with Plotly")
     fig = px.bar(resultQ1, x="Zone", y="total_trips", color="Zone",
                      labels={'total_trips': 'Total Trips'})
     fig.update_layout(height=500)
@@ -244,7 +244,6 @@ with tab2:
 
     filtered = resultQ2[(resultQ2["hour"] >= start_hour) & (resultQ2["hour"] <= stop_hour)]
 
-    st.write("Chart with Plotly")
     fig2 = px.line(filtered, x="hour", y="avg_fare", title="Average Fare by hour of day",
                        labels={'avg_fare': 'Average Fare', 'hour': 'Hour'})
     fig2.update_layout(height=500)
@@ -270,7 +269,6 @@ with tab4:
     with st.expander("About this chart"):
         st.write("The visualization shows that the majority of trips are paid in cash. This shows that NYC mostly relies on cash.")
 
-    st.write("Chart with Plotly")
     fig4 = px.bar(resultQ3, x="payment_type", y="percentage", title="Breakdown of Payment Types", color="payment_type",
                       labels={'payment_type': 'Payment Type', "percentage": "Percentage of Trips"}, height=400)
     fig4.update_layout(height=500)
