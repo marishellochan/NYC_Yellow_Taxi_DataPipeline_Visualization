@@ -128,6 +128,7 @@ st.markdown("""
 This dashboard lets you explore NYC Yellow Taxi trip data. You can filter by date, hour of day, and payment type, 
 and view insights such as top pickup zones, fare patterns, trip distances, payment breakdowns, and weekly trip trends.
 
+NB: The data is sampled to 500,000 rows for performance reasons.
 Built with Streamlit and Plotly. 
 """)
 
